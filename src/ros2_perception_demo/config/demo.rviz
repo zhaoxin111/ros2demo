@@ -1,0 +1,49 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Class: rviz_default_plugins/Grid
+      Name: Ground grid
+      Enabled: true
+      Cell Size: 0.5
+      Plane Cell Count: 12
+    - Class: rviz_default_plugins/TF
+      Name: Camera and base frames
+      Enabled: true
+      Show Names: true
+      Show Axes: true
+      Show Arrows: true
+    - Class: rviz_default_plugins/Marker
+      Name: Target in map
+      Enabled: true
+      Topic:
+        Value: /target/marker
+        Reliability Policy: Reliable
+    - Class: rviz_default_plugins/Image
+      Name: RGB camera
+      Enabled: true
+      Topic:
+        Value: /camera/color/image_raw
+        Reliability Policy: Best Effort
+        Transport Hint: raw
+  Global Options:
+    Fixed Frame: map
+    Background Color: 28; 32; 40
+  Tools:
+    - Class: rviz_default_plugins/Interact
+    - Class: rviz_default_plugins/MoveCamera
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Distance: 5.0
+      Pitch: 0.55
+      Yaw: 1.05
+      Focal Point:
+        X: 1.0
+        Y: 0.0
+        Z: 0.4
+Window Geometry:
+  Width: 1200
+  Height: 800

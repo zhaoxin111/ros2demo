@@ -1,0 +1,9 @@
+localize_target:
+  ros__parameters:
+    # 等待采集时刻对应 TF 的最长真实时长（秒）；超时只丢弃该帧地图定位。
+    tf_wait_sec: 0.5
+
+target_query:
+  ros__parameters:
+    # Service 可返回的观测最大年龄（秒），按 ROS 时间与消息采集时间之差计算。
+    target_max_age_sec: 1.0

@@ -1,0 +1,14 @@
+# 目标：仅收集接受任务后收到的新观测，同时只允许一个活动任务。
+# 所需帧数：1～3000；超时：大于 0 且不超过 300 秒，按真实流逝时间计时。
+uint32 required_samples
+float32 timeout_sec
+---
+# 结果：无论成功、取消或超时，都返回已收集的帧数。
+uint32 samples_collected
+# 仅成功时填充平均地图位置；时间戳沿用最后一帧。取消或超时时不要使用此字段。
+geometry_msgs/PointStamped mean_position
+string message
+---
+# 反馈：每收到一帧新观测，就返回当前计数和最新地图位置。
+uint32 samples_collected
+geometry_msgs/PointStamped latest_position

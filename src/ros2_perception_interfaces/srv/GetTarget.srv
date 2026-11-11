@@ -1,0 +1,7 @@
+# 请求部分为空：客户端只需发送 {}，立即查询最近的有效地图位置。
+---
+# 响应部分。found 为 false 时不要使用 position，原因见 message。
+bool found
+# map 坐标系中的位置（米），时间戳为该帧的采集时间。
+geometry_msgs/PointStamped position
+string message

@@ -1,0 +1,7 @@
+# 静态 TF 发布一次后仍需保留，供较晚加入的订阅者接收。
+# 录包和回放都使用此文件，使播放器也保留 transient_local 行为。
+/tf_static:
+  history: keep_last
+  depth: 1
+  reliability: reliable
+  durability: transient_local
